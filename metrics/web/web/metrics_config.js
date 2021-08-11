@@ -37,7 +37,7 @@ class MetricsConfig {
      * Creates a new instance of the MetricsConfig with default value for each configuration item.
      */
     constructor() {
-        this.googleSignInClientId = "$GOOGLE_SIGN_IN_CLIENT_ID";
+        this.googleSignInClientId = "64890292739-i4t62v3u0ahnpfn9t7em404im7944rsm.apps.googleusercontent.com";
         this.sentryDsn = "$SENTRY_DSN";
         this.sentryEnvironment = "$SENTRY_ENVIRONMENT";
         this.sentryRelease = "$SENTRY_RELEASE";

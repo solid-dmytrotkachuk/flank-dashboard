@@ -1,6 +1,8 @@
 {
   "projects": {
     "default": "metrics-d9c67",
-    "test": "metrics-test-25d15"
+    "test": "metrics-test-25d15",
+    "metrics_firebase": "metrix-test-tkachuk",
+    "firebase_metrics": "metrix-test-tkachuk"
   }
 }

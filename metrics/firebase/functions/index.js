@@ -29,7 +29,7 @@ const buildStatuses = ['BuildStatus.successful', 'BuildStatus.unknown', 'BuildSt
  */
 exports.seedData = functions.https.onRequest(async (req, resp) => {
     /// Change to enable this function.
-    const inactive = true;
+    const inactive = false;
 
     if (inactive) {
         return resp.status(200).send('done');

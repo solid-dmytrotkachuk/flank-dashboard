@@ -1,5 +1,15 @@
 {
   "projects": {
-    "default": "metrics-d9c67"
+    "default": "metrics-d9c67",
+    "metrics": "metrix-test-tkachuk"
+  },
+  "targets": {
+    "metrix-test-tkachuk": {
+      "hosting": {
+        "metrics": [
+          "metrix-test-tkachuk"
+        ]
+      }
+    }
   }
 }
