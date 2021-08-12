@@ -11,9 +11,11 @@ class FeatureConfigData extends FeatureConfig implements DataModel {
   const FeatureConfigData({
     bool isPasswordSignInOptionEnabled,
     bool isDebugMenuEnabled,
+    bool isPublicDashboardFeatureEnabled,
   }) : super(
           isPasswordSignInOptionEnabled: isPasswordSignInOptionEnabled,
           isDebugMenuEnabled: isDebugMenuEnabled,
+          isPublicDashboardFeatureEnabled : isPublicDashboardFeatureEnabled,
         );
 
   /// Creates the [FeatureConfigData] from the given [json].
@@ -26,6 +28,7 @@ class FeatureConfigData extends FeatureConfig implements DataModel {
       isPasswordSignInOptionEnabled:
           json['isPasswordSignInOptionEnabled'] as bool,
       isDebugMenuEnabled: json['isDebugMenuEnabled'] as bool,
+      isPublicDashboardFeatureEnabled: json['isPublicDashboardEnabled'] as bool,
     );
   }
 
@@ -34,6 +37,7 @@ class FeatureConfigData extends FeatureConfig implements DataModel {
     return {
       'isPasswordSignInOptionEnabled': isPasswordSignInOptionEnabled,
       'isDebugMenuEnabled': isDebugMenuEnabled,
+      'isPublicDashboardEnabled': isPublicDashboardFeatureEnabled,
     };
   }
 }
