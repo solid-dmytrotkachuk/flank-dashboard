@@ -1,4 +1,4 @@
-// Use of this source code is governed by the Apache License, Version 2.0 
+// Use of this source code is governed by the Apache License, Version 2.0
 // that can be found in the LICENSE file.
 
 import 'package:flutter/foundation.dart';
@@ -7,7 +7,7 @@ import 'package:metrics/feature_config/domain/usecases/fetch_feature_config_usec
 import 'package:metrics/feature_config/domain/usecases/parameters/feature_config_param.dart';
 import 'package:metrics/feature_config/presentation/view_models/debug_menu_feature_config_view_model.dart';
 import 'package:metrics/feature_config/presentation/view_models/password_sign_in_option_feature_config_view_model.dart';
-import 'package:metrics/feature_config/presentation/view_models/public_dashboard_feature_config_view_model.dart';
+import 'package:metrics/feature_config/presentation/models/public_dashboard_feature_config_model.dart';
 
 /// The [ChangeNotifier] that holds [FeatureConfig]'s data.
 class FeatureConfigNotifier extends ChangeNotifier {
@@ -33,7 +33,7 @@ class FeatureConfigNotifier extends ChangeNotifier {
   DebugMenuFeatureConfigViewModel _debugMenuFeatureConfigViewModel;
 
   /// A view model that holds the [FeatureConfig] data for the public dashboard.
-  PublicDashboardFeatureConfigViewModel _publicDashboardFeatureConfigViewModel;
+  PublicDashboardFeatureConfigModel _publicDashboardFeatureConfigViewModel;
 
   /// Returns `true` if the [FeatureConfig] is loading.
   /// Otherwise, returns `false`.
@@ -55,8 +55,8 @@ class FeatureConfigNotifier extends ChangeNotifier {
 
   /// A view model that provides the [FeatureConfig] data for the public
   /// dashboard.
-  PublicDashboardFeatureConfigViewModel
-      get publicDashboardFeatureConfigViewModel=>
+  PublicDashboardFeatureConfigModel
+      get publicDashboardFeatureConfigViewModel =>
           _publicDashboardFeatureConfigViewModel;
 
   /// Creates an instance of the [FeatureConfigNotifier]
@@ -117,8 +117,8 @@ class FeatureConfigNotifier extends ChangeNotifier {
       isEnabled: _featureConfig.isDebugMenuEnabled,
     );
     _publicDashboardFeatureConfigViewModel =
-        PublicDashboardFeatureConfigViewModel(
-      isEnabled: _featureConfig.isPasswordSignInOptionEnabled);
+        PublicDashboardFeatureConfigModel(
+            isEnabled: _featureConfig.isPasswordSignInOptionEnabled);
   }
 
   /// Sets the current [_isLoading] value to the given [value]
