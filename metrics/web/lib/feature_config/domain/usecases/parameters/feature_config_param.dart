@@ -12,10 +12,14 @@ class FeatureConfigParam extends Equatable {
   /// Indicates whether the debug menu feature is enabled.
   final bool isDebugMenuEnabled;
 
+  /// Indicates whether the public dashboard feature is enabled.
+  final bool isPublicDashboardFeatureEnabled;
+
   @override
   List<Object> get props => [
         isPasswordSignInOptionEnabled,
         isDebugMenuEnabled,
+        isPublicDashboardFeatureEnabled,
       ];
 
   /// Creates a new instance of the [FeatureConfigParam]
@@ -25,6 +29,7 @@ class FeatureConfigParam extends Equatable {
   FeatureConfigParam({
     @required this.isPasswordSignInOptionEnabled,
     @required this.isDebugMenuEnabled,
+    @required this.isPublicDashboardFeatureEnabled,
   }) {
     ArgumentError.checkNotNull(
         isPasswordSignInOptionEnabled, 'isPasswordSignInOptionEnabled');
