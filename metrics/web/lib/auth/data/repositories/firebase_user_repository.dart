@@ -1,4 +1,4 @@
-// Use of this source code is governed by the Apache License, Version 2.0 
+// Use of this source code is governed by the Apache License, Version 2.0
 // that can be found in the LICENSE file.
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -188,6 +188,18 @@ class FirebaseUserRepository implements UserRepository {
       throw const PersistentStoreException(
         code: PersistentStoreErrorCode.unknown,
       );
+    }
+  }
+
+  @override
+  Future<void> signInAnonymously() async {
+    try {
+      await _firebaseAuth.signInAnonymously();
+    } catch (error) {
+      final errorCode = error.code as String;
+      final authErrorCode = FirebaseAuthErrorCodeConverter.convert(errorCode);
+
+      throw AuthenticationException(code: authErrorCode);
     }
   }
 }
