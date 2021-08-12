@@ -58,4 +58,7 @@ abstract class UserRepository {
   ///
   /// Throws a [PersistentStoreException] if updating is failed.
   Future<void> updateUserProfile(String id, ThemeType selectedTheme);
+
+  /// Provides an ability to sign in a user anonymously.
+  Future<void> signInAnonymously();
 }
